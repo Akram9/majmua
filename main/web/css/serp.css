@@ -1,0 +1,456 @@
+* {
+    box-sizing: border-box;
+}
+
+html { font-size:100%; }
+
+body {
+    color: rgb(90, 90, 90);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+button:focus {
+    outline: 0;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+#name {
+    color: rgb(255, 187, 0);
+}
+
+#text-box {
+    border-style: solid;
+    border-color: rgb(211, 247, 113);
+}
+
+#search-button {
+    border-style: solid;
+    background-color: rgb(211, 247, 113);
+    border-color: rgb(211, 247, 113);
+}
+
+@media only screen and (orientation: landscape) {
+    html {
+        min-width: 1101px;
+    }
+
+    input:focus {
+        outline: 0;
+    }
+
+    #div0 {
+        display: flex;
+        min-height: 40px;
+        padding: 0px 25px;
+        overflow: hidden;
+        vertical-align: auto;
+        border-bottom-color: rgb(241, 241, 241);
+        border-bottom-style: solid;
+        border-bottom-width: 0.1rem;
+    }
+
+    .div0-elements {
+        border: 0px solid;
+    }
+
+    #div0l {
+        align-self: center;
+        width: 70%;
+        display: flex;
+        align-items: center;
+
+    }
+
+    #name {
+        font-size: 1.7em;
+        margin-right: 0.5em;
+    }
+
+    #name:hover {
+        text-decoration: none;
+    }
+
+    #text-box {
+        min-width: 350px;
+        width: 30rem;
+        height: 2.2rem;
+        font-size: 1.1rem;
+        margin: 0px 0px 0px 5px;
+        padding: 0 0.5rem;
+        border-right: none;
+        vertical-align: middle;
+        border-width: 0.2rem;
+    }
+
+    #search-button {
+        width: 5rem;
+        height: 2.2rem;
+        font-size: 1.1rem;
+        margin: 0px 5px 0px 0px;
+        border-left: none;
+        padding: 0px 5px;
+        vertical-align: middle;
+        border-width: 0.2rem;
+    }
+
+    #search-button:hover {
+        background-color: rgb(157, 255, 101);
+    }
+
+    #div0r {
+        flex: 1;
+        text-align: right;
+        width: 30%;
+    }
+
+    #date {
+        font-size: 21px;
+    }
+
+    #results-div {
+        border: 0px solid;
+        margin: 10x 0px 10px 0px;
+        padding: 50px 400px 10px 140px;
+        width: 100%;
+        overflow: auto;
+        min-width: 1101px;
+    }
+
+    .result-parent {
+        border: 0px solid;
+        display: inline-block;
+        width: 100%;
+        clear: both;
+        margin-bottom: 1.5rem;
+    }
+
+    .results {
+        border: 0px solid;
+    }
+
+    .title {
+        margin-top: 0px;
+        margin-bottom: 0;
+        font-size: 18px;
+        color: rgb(69, 69, 212);
+    }
+
+    .link {
+        margin-top: 0;
+        margin-bottom: 0px;
+        font-size: 13px;
+        color: rgb(5, 190, 5);
+    }
+
+    .description {
+        margin-top: 5px;
+        margin-bottom: 0rem;
+        font-size: 14px;
+    }
+
+    .report {
+        border: 0px solid;
+        min-width: 60px;
+        text-align: left;
+        padding: 0;
+    }
+
+    #report-button {
+        font-size: 13px;
+        color: rgb(255, 100, 100);
+        background-color: white;
+        border: none;
+        padding: 0.3rem 0;
+    }
+
+    #report-button:hover {
+        color: white;
+        background-color: rgb(255, 100, 100);
+    }
+
+    #report-button:active {
+        color: white;
+        background-color: red;
+    }
+
+    #page-numbers-div {
+        padding: 5px 100px 5px 140px;
+        align-self: center;
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    #page-numbers-div h3 {
+        margin: 10px 10px 10px 0px;
+        color: rgb(45, 255, 45);
+        font-size: 25px;
+    }
+
+    .page-buttons {
+        border: none;
+        border-radius: 20px;
+        margin: 0px 10px 0px 10px;
+        font-size: 15px;
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+    }
+
+    #page-button {
+        background-color: white;
+    }
+
+    #page-button:hover {
+        background-color: rgb(145, 236, 186);
+    }
+
+    #page-button-current {
+        background-color: rgb(35, 240, 35);
+    }
+
+    #page-button-current:hover {
+        background-color: rgb(145, 236, 186);
+    }
+
+    #bottom-search {
+        align-self: center;
+        width: 70%;
+        display: none;
+        align-items: center;
+        padding: 0px 25px 0px 25px;
+        margin: 10px 0px 30px 0px;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1100px) and (orientation: portrait) {
+    input:focus {
+        outline: 0;
+    }
+
+    #div0 {
+        display: inline-block;
+        border-bottom-color: rgb(241, 241, 241);
+        border-bottom-width: 0.1rem;
+        border-bottom-style: solid;
+        padding: 0;
+        width: 100%;
+        vertical-align: auto;
+    }
+
+    .div0-elements {
+        border: 0rem solid;
+        width: 100%;
+    }
+
+    #div0l {
+        width: 100%;
+        display: block;
+        align-items: center;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    #name {
+        font-size: 2rem;
+        margin-left: 4%;
+        margin-bottom: 0;
+    }
+
+    #name:hover {
+        text-decoration: none;
+    }
+
+    #text-box {
+        width: 75%;
+        height: 2.5rem;
+        font-size: 1.3rem;
+        padding: 0 0.5rem;
+        vertical-align: middle;
+        border-width: 0.21rem;
+        margin: 0 0 0 4%;
+        border-right: none;
+    }
+
+    #search-button {
+        width: 17%;
+        height: 2.5rem;
+        font-size: 1rem;
+        margin: 0 4% 0 0;
+        border-left: none;
+        vertical-align: middle;
+    }
+
+    #search-button:hover {
+        /*color: rgb(85, 85, 85);*/
+        background-color: rgb(157, 255, 101);
+    }
+
+    #div0r {
+        text-align: center;
+        width: 100%;
+        padding-top: 0.1rem;
+    }
+
+    #date {
+        font-size: 0.8rem;
+    }
+
+    #results-div {
+        border: 0px solid;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: rgb(241, 241, 241);
+    }
+
+    #results-div > p{
+        margin: 1rem 1rem;
+        background-color: white;
+    }
+
+    .result-parent {
+        border: 0px solid;
+        padding: 0;
+        margin: 0 0 0.3rem 0;
+        display: inline-block;
+        width: 100%;
+        clear: both;
+        background-color: white;
+    }
+
+    .results {
+        border: 0px solid;
+        padding: 0 4%;
+    }
+
+    .title {
+        margin-top: 1rem;
+        margin-bottom: 0;
+        font-size: 1.2rem;
+        color: rgb(69, 69, 212);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .link {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 0.8rem;
+        color: rgb(5, 190, 5);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .description {
+        margin-top: 0.3rem;
+        margin-bottom: 0;
+        font-size: 1rem;
+    }
+
+    .report {
+        width: 100%;
+        border: 0px solid;
+        text-align: right;
+        padding: 0 4%;
+        margin-bottom: 0.5rem;
+    }
+
+    #report-button {
+        font-size: 0.8rem;
+        color: rgb(255, 100, 100);
+        background-color: white;
+        border: none;
+    }
+
+    #report-button:hover {
+        color: white;
+        background-color: rgb(255, 100, 100);
+    }
+
+    #report-button:active {
+        color: white;
+        background-color: red;
+    }
+
+    #page-numbers-div {
+        padding: 0 4%;
+        align-self: center;
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin-bottom: 1rem;
+        border: 0px solid;
+        justify-content: center;
+    }
+
+    #page-numbers-div h3 {
+        margin-right: 0.3rem;
+        color: rgb(45, 255, 45);
+        font-size: 1rem;
+        vertical-align: middle;
+    }
+
+    .page-buttons {
+        vertical-align: middle;
+        border: none;
+        border-radius: 0.7rem;
+        margin: 0 0.1rem;
+        font-size: 0.8rem;
+        display: inline-block;
+        height: 1.4rem;
+        width: 1.4rem;
+    }
+
+    #page-button {
+        background-color: white;
+    }
+
+    #page-button:hover {
+        background-color: rgb(145, 236, 186);
+    }
+
+    #page-button-current {
+        background-color: rgb(35, 240, 35);
+    }
+
+    #page-button-current:hover {
+        background-color: rgb(145, 236, 186);
+    }
+
+    #bottom-search {
+        align-self: center;
+        width: 70%;
+        display: none;
+        align-items: center;
+        padding: 0px 25px 0px 25px;
+        margin: 10px 0px 30px 0px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+}

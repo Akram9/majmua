@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+html { 
+    font-size:100%;
+    height: 100%;
+}
+
+body {
+    color: rgb(90, 90, 90);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+button:focus {
+    outline: 0;
+}
+
+input:focus {
+        outline: 0;
+    }
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+#name {
+    /*color: rgb(0, 185, 0);*/
+    color: rgb(127, 211, 0);
+}
+
+#text-box {
+    border-style: solid;
+    /*border-color: rgb(161, 245, 82);*/
+    /*border-color: rgb(179, 255, 0);*/
+    border-color: rgb(127, 211, 0);
+    /*border-color: rgb(255, 230, 0);*/
+    /*border-color: rgb(141, 236, 63);*/
+    border-radius: 0;
+}
+
+#search-button {
+    border-style: solid;
+    background-color: rgb(127, 211, 0);
+    border-color: rgb(127, 211, 0);
+    color: white;
+    /*background-color: rgb(255, 230, 0);
+    border-color: rgb(255, 230, 0);*/
+    border-radius: 0;
+}
+
+#search-button:hover {
+        background-color: rgb(121, 228, 0);
+        border-color: rgb(121, 228, 0);
+        /*background-color: rgb(179, 255, 0);*/
+        /*background-color: rgb(255, 251, 0);*/
+}
+
+@media only screen and (min-width: 1100px){
+    #div0 {
+        padding: 0 1rem;
+        margin: 0;
+        overflow: hidden;
+        vertical-align: auto;
+        width: 100%;
+        text-align: right;
+    }
+
+    #div-main {
+        border: 0px solid;
+        margin: 0;
+        padding: 7rem 20%;
+    }
+
+    #search {
+        border: 0px solid;
+        padding: 0;
+    }
+
+    #name {
+        font-size: 2.7rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #text-box {
+        width: 87%;
+        height: 3rem;
+        font-size: 1.7rem;
+        margin: 0;
+        padding: 0 1rem;
+        text-align: left;
+        border-width: 0.2rem;
+        border-right: none;
+        vertical-align: bottom;
+    }
+
+    #search-button {
+        width: 13%;
+        height: 3rem;
+        font-size: 1rem;
+        border-left: none;
+        border-width: 0.2rem;
+        vertical-align: bottom;
+    }
+}
+
+/*****************************************************************************/
+
+@media only screen and (max-width: 1100px) {
+    #div0 {
+        border: 0px solid;
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+        margin: 0;
+        overflow: hidden;
+        vertical-align: auto;
+        text-align: center;
+    }
+
+    #div-main {
+        margin: 0;
+        padding: 0;
+        border: 0px solid;
+        height: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #search {
+        border: 0px solid;
+        text-align: left;
+        margin: 0 4%;
+        padding: 0;
+    }
+
+    #name {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    #text-box {
+        width: 80%;
+        height: 3rem;
+        font-size: 1.3rem;
+        padding: 0 0.5rem;
+        vertical-align: bottom;
+        border-width: 0.2rem;
+        border-right: none;
+    }
+
+    #search-button {
+        width: 20%;
+        height: 3rem;
+        font-size: 1rem;
+        border-width: 0.2rem;
+        border-left: none;
+        vertical-align: bottom;
+    }
+}
