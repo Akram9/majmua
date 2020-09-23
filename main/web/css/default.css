@@ -2,6 +2,23 @@ h4 {
     margin-bottom: 0;
 }
 
+a:link {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(161, 245, 82);
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a.title:visited {
+    text-decoration: none;
+}
+
 @media only screen and (min-width: 1100px){
     #wrap {
         padding: 0 15%;

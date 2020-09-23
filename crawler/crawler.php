@@ -291,11 +291,6 @@ while($row = mysqli_fetch_array($domains_to_visit)) {
             
             $extracted_url = $link->getAttribute('href');
             
-            // following only for islamhouse.com to respect its robots.txt
-            if (strpos($extracted_url, 'download-excel')) {
-                continue;
-            }
-            
             // skip 'mailto:' links
             if (is_int(strpos($extracted_url, 'mailto:'))) {
                 continue;
