@@ -7,6 +7,10 @@
 
 use yii\helpers\Html;
 
+use app\assets\DefaultAsset;
+
+DefaultAsset::register($this);
+
 $this->title = $name;
 ?>
 <div class="site-error">

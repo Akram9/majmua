@@ -110,6 +110,7 @@ class SiteController extends Controller
     /*
     public function actionContact()
     {
+        $this->layout = 'footer';
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
@@ -215,23 +216,23 @@ class SiteController extends Controller
     }
 
     protected function get_ids($query, $page) {
-        $sphinx = Yii::$app->indexer;
+        $indexer = Yii::$app->indexer;
         $page = ($page - 1) * 10;
-        $query = '"' . $query . '"/1';
-        $sphinxquery = $sphinx->createCommand("SELECT id FROM linkindex WHERE MATCH(:query) LIMIT :page, :rpp
-                    OPTION field_weights=(title=6, keywords=5, link=5, description=3, body=2);");
+        $indexquery = $indexer->createCommand("SELECT id FROM linkindexen WHERE MATCH(:query) LIMIT :page, :rpp
+                    OPTION field_weights=(title=9, keywords=7, link=5, description=5, body=2);");
 
         try {
-            $ids = $sphinxquery->bindValues([':query' => $query, ':page' => $page, ':rpp' => 10])->queryAll();
+            $query = '"' . $query . '"/1';
+            $ids = $indexquery->bindValues([':query' => $query, ':page' => $page, ':rpp' => 10])->queryAll();
         } catch (\Exception $e) {
-            Yii::error('Manticore error: ' . $e);
+            Yii::error("Manticore error:\n" . $e);
             return 'Error';
         }
 
         if (!$ids) return false;
 
         $ids = array_column($ids, 'id');
-        $metas = $sphinx->createCommand('SHOW META;')->queryAll();
+        $metas = $indexer->createCommand('SHOW META;')->queryAll();
         foreach ($metas as $meta) {
             if ($meta['Variable_name'] === 'total') {
                 $maxres = $meta['Value'];
@@ -250,7 +251,7 @@ class SiteController extends Controller
             $dbquery = $searchdb->createCommand("SELECT title, link, description FROM links WHERE id IN $ids;")
             ->queryAll();
         } catch(\Exception $e) {
-            Yii::error('MySQL error: ' . $e);
+            Yii::error("MySQL error:\n" . $e);
             return 'Error';
         }
         

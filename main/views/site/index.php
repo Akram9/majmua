@@ -1,13 +1,12 @@
 <?php
 
-use Yii;
 use app\assets\IndexAsset;
 
 IndexAsset::register($this);
 ?>
 
 <?php $this->beginPage()?>
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -29,7 +28,7 @@ IndexAsset::register($this);
     <div id="search">
         <p id="name">Majmua</p>
         <form name="searchform" action="/search" method="GET" id="searchform">
-            <input type="text" id="text-box" name="q" placeholder="Type here" value=""><input id="search-button" type="submit" value="Search">
+            <input type="text" id="text-box" name="q" placeholder="Type here" value="" autofocus><input id="search-button" type="submit" value="Search">
         </form>
     </div>
 </div>

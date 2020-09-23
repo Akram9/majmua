@@ -22,9 +22,9 @@ SearchAsset::register($this);
 <body>
     <div id="div0">
         <div id="div0l" class="div0-elements">
-            <p><a href="/" id="name">Majmua</a></p>
-            <form name="searchform" action="/search" method="GET" id="searchform">
-                <input type="text" id="text-box" name="q" value="$query"><input type="submit" id="search-button" value="Search">
+            <p><a href="/site/search" id="name">Majmua</a></p>
+            <form name="searchform" action="/site/search" method="GET" id="searchform">
+                <input type="text" id="text-box" name="q" value="<?= $query ?>"><input type="submit" id="search-button" value="Search">
             </form>
         </div>
         <div id="div0r" class="div0-elements">
@@ -33,8 +33,8 @@ SearchAsset::register($this);
     </div>
     <div id="results-div">
         <p>
-            There was an error in the database related to this query.<br><br>
-            InshaAllah, this will be resolved soon.
+            There was an error in the database related to this query.<br>
+            InshaAllah, we will solve this soon.
         </p>
     </div>
 </body>

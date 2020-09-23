@@ -48,8 +48,8 @@ SearchAsset::register($this);
             }
             echo "<div class='result-parent'>
                     <div class='results'>
-                        <p class='title'><a href='{$result['link']}' class='title'>{$title}</a></p>
-                        <p class='link'><a href='{$result['link']}' class='link'>{$link}</a></p>
+                        <p class='title'><a href='{$result['link']}' class='title' target='_blank'>{$title}</a></p>
+                        <p class='link'><a href='{$result['link']}' class='link' target='_blank'>{$link}</a></p>
                         <p class='description'>{$description}</p>
                     </div>
                     <div class='report'>

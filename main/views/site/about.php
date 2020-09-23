@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p class="about-para">
         &emsp;
-        Any source that goes against the Quran or Hadith are not reliable at all.
+        Any source that goes against the Quran or Hadith are not reliable.
         Surprisingly, there are way too many sources as such available on the internet.
         Also, Majmua excludes those websites that may have doubtful clamis like the need to
         'reinterpret the Quran', or that we should 'integrate' corrupted ideologies in the religion.
@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
         The only way to recognize such sites are to explicitly read through them and scrutinize
         their content.
         But since every website has too much content to read all of it, only some topics, where most
-        fail, are examined along with some random articels.
+        fail, are examined along with some random articles.
         Yet, it may happen that a source slips through which may be not right.
         For such cases, it is highly recommended to the users, if they detect, to report the source
         using the report button.
@@ -53,7 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
         &emsp;
         Majmua is my first software project that I have worked on till deployment.
         Yet, a lot is to be done for a great experience.
-        The most important thing to work on is to improve search quality and if possible, quantity.
+        The most important thing to work on is to improve search quality, and if possible, quantity.
         Also, there are lot of issues and bugs that need to be addressed.
         Support for different languages is also planned.
         In fact, the database already has huge fraction of non-English material.
@@ -75,11 +75,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <br>
 
     <h4>
-        Assalamualaikum,
-        <br><br>
-        Your brother in Islam,
-        <br><br>
-        Akram
+        Assalamualaikum
         <br><br><br>
     </h4>
 
