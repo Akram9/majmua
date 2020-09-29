@@ -157,7 +157,7 @@ class SiteController extends Controller
         if ($index === false) {
             return $this->render('noresults', ['query' => $query]);
         } elseif ($index === 'Error') {
-            return $this->render('dberror', ['query' => $query]);
+            return $this->render('dberror', ['query' => $query, 'db' => 0]);
         }
         
         $maxpages = round($index[1] / 10);
@@ -171,7 +171,7 @@ class SiteController extends Controller
         $results = $this->get_results($index[0]);
 
         if ($results === 'Error') {
-            return $this->render('dberror', ['query' => $query]);
+            return $this->render('dberror', ['query' => $query, 'db' => 1]);
         }
         return $this->render('search', ['query' => $query, 'results' => $results, 
                                         'maxpages' => $maxpages, 'page' => $page]);
@@ -219,7 +219,8 @@ class SiteController extends Controller
         $indexer = Yii::$app->indexer;
         $page = ($page - 1) * 10;
         $indexquery = $indexer->createCommand("SELECT id FROM linkindexen WHERE MATCH(:query) LIMIT :page, :rpp
-                    OPTION field_weights=(title=9, keywords=7, link=5, description=5, body=2);");
+                    OPTION RANKER=expr('sum(wlccs*user_weight)*1000 + bm25'),
+                    field_weights=(title=20, keywords=5, link=1, description=5, body=2);");
 
         try {
             $query = '"' . $query . '"/1';

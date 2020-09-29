@@ -15,7 +15,7 @@ SearchAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
-    <meta name="theme-color" content="rgb(117, 196, 0)">
+    <meta name="theme-color" content="rgb(255, 255, 255)">
 </head>
 
 <body>

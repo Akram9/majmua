@@ -8,23 +8,21 @@ $this->title = 'About Majmua';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
-    <h1>About <span class="green">Majmua</span></h1>
+    <h1>About <span class="green">Majmua</span>, the website</h1>
 
     <p class="about-para">
         &emsp;
-        Majmua is a search engine focused on serving content from only a handful of websites.
-        Unlike most others, Majmua's aims lie in searching through reliable Islamic websites.
-        It is not a competitor or alternative to other search engines.
-        <br><br>&emsp;
+        Majmua is a website focused on serving content from only a handful of websites.
+        Majmua's aims lie in searching through websites that teach the religion of Islam.
         Majmua is an Arabic term meaning collection.
-        Initially, Majmua started as a collection of websites that teach Islam in the original,
-        traditional way.
+        Initially, Majmua started as a collection of websites that teach Islam in the traditional
+        way.
         As the list of such websites grew, the problem of searching through them arised.
         Majmua, the serch engine, was created to solve this problem.
     </p>
     <br>
 
-    <h3><span class="green">Criteria</span> for being Reliable and Trustable</h3>
+    <!--h3><span class="green">Criteria</span> for being Reliable and Trustable</h3>
 
     <p class="about-para">
         &emsp;
@@ -43,12 +41,16 @@ $this->params['breadcrumbs'][] = $this->title;
         For such cases, it is highly recommended to the users, if they detect, to report the source
         using the report button.
     </p>
-    <br>
+    <br-->
 
     <h3>The <span class="green">Search Engine</span></h3>
 
     <p class="about-para">
         &emsp;
+        Majmua is a simple search engine using open source components.
+        The crawler being used is Scrapy based, while the database and indexing software used are
+        MariaDB and Manticoresearch respectively.
+        The controller logic and front end are in PHP and Yii2 framework.
         Source code of the search engine Majmua is available on
         <a href="https://github.com/Akram9/majmua" class="green">github</a>.
         This website, majmua.org, is an implementation of the framework.
@@ -63,10 +65,9 @@ $this->params['breadcrumbs'][] = $this->title;
         &emsp;
         Majmua is my first software project that I have worked on till deployment.
         Yet, a lot is to be done for a great experience.
-        The most important thing to work on is to improve search quality, and if possible, quantity.
+        The most important thing to work on is to improve search quality.
         Also, there are lot of issues and bugs that need to be addressed.
         Support for different languages is also planned.
-        In fact, the database already has huge fraction of non-English material.
         Apart from these, both the frontend and backend need a lot of improvements.
     </p>
     <br>
@@ -79,7 +80,6 @@ $this->params['breadcrumbs'][] = $this->title;
         and also erratic behaviour.
         If you are a developer and are willing to help with development, head over to
         <a href="https://github.com/Akram9/majmua" class="green">github</a>.
-        InshAllah with time, I intend to involve more people and improve Majmua.
         As a sidenote, Majmua is running on only one server currently, which may cause it to be
         slow in different parts of the world.
     </p>

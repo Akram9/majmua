@@ -33,7 +33,7 @@ SearchAsset::register($this);
     </div>
     <div id="results-div">
         <p>
-            There was an error in the database related to this query.<br>
+            There was an error in the database <?= $db ?> related to this query.<br>
             InshaAllah, we will solve this soon.
         </p>
     </div>
