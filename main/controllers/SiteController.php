@@ -205,14 +205,17 @@ class SiteController extends Controller
     {
         $count = count($arr);
 
-        $result = "(";
+        $result = "";
 
         for ($i = 0; $i < ($count-1); $i++) {
             $result = $result . $arr[$i] . ", ";
         }
-        $result = $result . $arr[$count - 1] . ")";
 
-        return $result;
+        $result = $result . $arr[$count - 1] . ")";
+        $order = "(id, " . $result;
+        $result = "(" . $result;
+
+        return [$result, $order];
     }
 
     protected function get_ids($query, $page) {
@@ -246,10 +249,11 @@ class SiteController extends Controller
     protected function get_results($ids) {
         $searchdb = Yii::$app->db;
         
-        $ids = $this->get_tuple($ids);
+        $id_tuple = $this->get_tuple($ids);
 
         try {
-            $dbquery = $searchdb->createCommand("SELECT title, link, description FROM links WHERE id IN $ids;")
+            $dbquery = $searchdb->createCommand("SELECT title, link, description FROM links WHERE
+                                                id IN $id_tuple[0] ORDER BY FIELD $id_tuple[1];")
             ->queryAll();
         } catch(\Exception $e) {
             Yii::error("MySQL error:\n" . $e);
