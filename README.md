@@ -41,7 +41,7 @@ And import the example sql-dump to the database.<br>
 <br>
 Connect the application to MariaDB by changing the parameters in `main/config/db.php`.<br>
 <br>
-To connect Manticore Search, copy the config file `config/manticore.conf` to the correct place. In Ubuntu, it is `/etc/manticoresearch/manticore.conf`.<br>
+To connect Manticore Search, copy the config file `config-files/manticore.conf` to the correct place. In Ubuntu, it is `/etc/manticoresearch/manticore.conf`.<br>
 Before this, enter the correct parameters in the config file regarding MariaDB - the username, password and database name.<br>
 <br>
 Run the `searchd` command in the terminal to start the search daemon. You may encounter `file not present errors`.
