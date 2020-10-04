@@ -1,16 +1,21 @@
-The front end Majmua is built on top the Yii2 framework.<br>
+# Majmua
+
+The front end of Majmua is built on top the Yii2 framework.<br>
 The backend uses MariaDB and ManticoreSearch.
 The crawler, which is yet to be added, is a Scrapy based crawler.
 
+## Get started
 To get started, fork the repo to your Github account.<br>
 Then clone the forked repo to your local development space.<br>
 It is suggested that you use a Unix-like OS (Linux based or OSX) to develop.
 Alternately you can develop on Windows 10 using WSL or by installing a Linux based OS onVirtualMachine.
 
+## Crawler
 If you wish to work on the crawler, ensure that you have Python 3 (>=3.5) is installed.<br>
 The crawler code will be in the `crawler` directory. Once the crawler is added, the instructions will be added here.<br>
 <br>
 <br>
+## Frontend
 To work on the frontend as well as backend, install the following - 
 * PHP 7 - https://www.php.net/manual/en/install.php 
 * Composer - https://getcomposer.org/doc/00-intro.md
@@ -29,6 +34,8 @@ Then in the browser try http://localhost:8000 or whatever port number you have c
 It is suggested to read the Yii2 docs for  better understanding - https://www.yiiframework.com/doc/guide/2.0/en/intro-yii.<br>
 The application style is that of the `Basic Application` on Yii2 giuide.
 <br>
+
+# Backend
 To work on the backend, you need to additionally install the following -
 * MariaDB - https://mariadb.com/kb/en/getting-installing-and-upgrading-mariadb/ or for linux - https://downloads.mariadb.org/mariadb/repositories/
 * Manticore Search - https://manual.manticoresearch.com/Installation
@@ -37,7 +44,7 @@ Then create a database with `utf8mb4` charset and `utf8mb4_unicode_ci` collation
 
 ```CREATE DATABASE mydatabase CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;```
 <br>
-And import the example sql-dump to the database.<br>
+And import the example sql-dump to the database. (link to be added)<br>
 <br>
 Connect the application to MariaDB by changing the parameters in `main/config/db.php`.<br>
 <br>
@@ -49,9 +56,10 @@ Creating the required directory should solve the issue.<br>
 <br>
 The run the indexer `indexer --all --rotate` to index the database's contents.<br>
 <br>
-It is recommended to go through the Manticore Search docs.<br>
+It is recommended to go through the Manticore Search docs to work with Manticore Search.<br>
 <br>
 <br>
+## Extras
 The database being used initially was MySQL. Although it should work fine even now with no change in code.<br>
 
 Currently, the crawler used is a PHP script.<br>
