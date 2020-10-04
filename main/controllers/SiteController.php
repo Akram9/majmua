@@ -55,6 +55,8 @@ class SiteController extends Controller
         ];
     }
 
+    // All view-functions go below
+
     /**
      * Displays homepage.
      *
@@ -200,6 +202,14 @@ class SiteController extends Controller
         $this->register_rep($post);
         return $this->render('registered');
     }
+
+    public function actionSerpdemo()
+    {
+        $this->layout = 'footer';
+        return $this->render('serpdemo');
+    }
+
+    // Protected functions go below
 
     protected function get_tuple($arr)
     {

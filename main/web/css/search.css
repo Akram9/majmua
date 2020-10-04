@@ -151,6 +151,7 @@ a.title:visited {
         border-right: none;
         vertical-align: middle;
         border-width: 0.13rem;
+        border-radius: 0.5rem 0 0 0.5rem;
     }
 
     #search-button {
@@ -162,6 +163,7 @@ a.title:visited {
         padding: 0 0.5rem;
         vertical-align: middle;
         border-width: 0.13rem;
+        border-radius: 0 0.5rem 0.5rem 0;
     }
 
     #div0r {
@@ -228,6 +230,7 @@ a.title:visited {
         background-color: white;
         border: none;
         padding: 0.3rem 0.3rem;
+        border-radius: 0.3rem;
     }
 
     #report-button:hover {
