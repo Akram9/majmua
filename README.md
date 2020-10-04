@@ -38,11 +38,17 @@ Then create a database with `utf8mb4` charset and `utf8mb4_unicode_ci` collation
 ```CREATE DATABASE mydatabase CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;```
 <br>
 And import the example sql-dump to the database.<br>
+<br>
 Connect the application to MariaDB by changing the parameters in `main/config/db.php`.<br>
+<br>
 To connect Manticore Search, copy the config file `config/manticore.conf` to the correct place. In Ubuntu, it is `/etc/manticoresearch/manticore.conf`.<br>
 Before this, enter the correct parameters in the config file regarding MariaDB - the username, password and database name.<br>
-Run the `searchd` command in the terminal to start the search daemon. You may encounter `file not present errors`. Creating the required directory should solve the issue.<br>
+<br>
+Run the `searchd` command in the terminal to start the search daemon. You may encounter `file not present errors`.
+Creating the required directory should solve the issue.<br>
+<br>
 The run the indexer `indexer --all --rotate` to index the database's contents.<br>
+<br>
 It is recommended to go through the Manticore Search docs.<br>
 <br>
 <br>
