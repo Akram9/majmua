@@ -29,13 +29,14 @@ Then in the browser try http://localhost:8000 or whatever port number you have c
 It is suggested to read the Yii2 docs for  better understanding - https://www.yiiframework.com/doc/guide/2.0/en/intro-yii.<br>
 The application style is that of the `Basic Application` on Yii2 giuide.
 <br>
-<br>
 To work on the backend, you need to additionally install the following -
 * MariaDB - https://mariadb.com/kb/en/getting-installing-and-upgrading-mariadb/ or for linux - https://downloads.mariadb.org/mariadb/repositories/
 * Manticore Search - https://manual.manticoresearch.com/Installation
 <br>
 Then create a database with `utf8mb4` charset and `utf8mb4_unicode_ci` collation in MariaDB -<br>
-`CREATE DATABASE mydatabase CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;`<br>
+
+```CREATE DATABASE mydatabase CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;```
+<br>
 And import the example sql-dump to the database.<br>
 Connect the application to MariaDB by changing the parameters in `main/config/db.php`.<br>
 To connect Manticore Search, copy the config file `config/manticore.conf` to the correct place. In Ubuntu, it is `/etc/manticoresearch/manticore.conf`.<br>
