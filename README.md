@@ -26,7 +26,7 @@ Test the application by running the following -
     composer install
     php yii serve --port=8000
 
-You may get errors while doing `compiser install` regarding missing `mbstring` dependencies. For this you need to install the `php-mbstring` package using your package manager like - `sudo apt-get install php-mbstring`.<br>
+You may get errors while doing `composer install` regarding missing `mbstring` dependencies. For this you need to install the `php-mbstring` package using your package manager like - `sudo apt-get install php-mbstring`.<br>
 <br>
 Also, ensure that port 8000 is empty. Or you may change the port to some other number and run the command.<br>
 Then in the browser try http://localhost:8000 or whatever port number you have chosen.<br>
