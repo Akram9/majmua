@@ -24,7 +24,7 @@ Test the application by running the following -
 
     cd <directory where cloned>/main
     composer install
-    php yii server --port=8000
+    php yii serve --port=8000
 
 You may get errors while doing `compiser install` regarding missing `mbstring` dependencies. For this you need to install the `php-mbstring` package using your package manager like - `sudo apt-get install php-mbstring`.<br>
 <br>
